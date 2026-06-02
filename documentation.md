@@ -1,4 +1,7 @@
-# InsuranceClaim Intelligence / FS-2026 Projekt
+# AI Applications Project Documentation Template
+
+Use this template to document your project concisely and completely.
+Fill in all required fields. Keep answers short and precise.
 
 ---
 
@@ -315,11 +318,14 @@ See [`models/eda_cv.png`](https://github.com/sgDarren/InsuranceClaimIntelligence
 
 - **Screenshot or short demo:**
 
-  EDA ML-Dataset (Schadenhöhe, Fraud Rate, Versicherungstypen):
-  ![EDA ML](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/eda_ml.png)
+  Tab 1 — Schadenanalyse (CV + NLP + ML Analyse):
+  ![App Tab 1](https://raw.githubusercontent.com/sgDarren/InsuranceClaimIntelligence/main/models/InsuranceClaimIntelligence_1.png)
 
-  CV Konfusionsmatrix + Klassen-Verteilung:
-  ![EDA CV](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/eda_cv.png)
+  Tab 2 — Deckungsauskunft (RAG + AXA AVB):
+  ![App Tab 2](https://raw.githubusercontent.com/sgDarren/InsuranceClaimIntelligence/main/models/InsuranceClaimIntelligence_2.png)
+
+  Tab 3 — Ergebnisse & Ablation Study:
+  ![App Tab 3](https://raw.githubusercontent.com/sgDarren/InsuranceClaimIntelligence/main/models/InsuranceClaimIntelligence_3.png)
 
 See [`app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/app.py) (HuggingFace-Version), [`src/app/app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/app/app.py) (lokale Version).
 
