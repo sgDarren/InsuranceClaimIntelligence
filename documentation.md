@@ -323,12 +323,15 @@ See [`models/eda_cv.png`](https://github.com/sgDarren/InsuranceClaimIntelligence
 - **Screenshot or short demo:**
 
   Tab 1 — Schadenanalyse (CV + NLP + ML Analyse):
+  
   ![App Tab 1](https://raw.githubusercontent.com/sgDarren/InsuranceClaimIntelligence/main/models/InsuranceClaimIntelligence_1.png)
 
   Tab 2 — Deckungsauskunft (RAG + AXA AVB):
+  
   ![App Tab 2](https://raw.githubusercontent.com/sgDarren/InsuranceClaimIntelligence/main/models/InsuranceClaimIntelligence_2.png)
 
   Tab 3 — Ergebnisse & Ablation Study:
+  
   ![App Tab 3](https://raw.githubusercontent.com/sgDarren/InsuranceClaimIntelligence/main/models/InsuranceClaimIntelligence_3.png)
 
 See [`app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/app.py) (HuggingFace-Version), [`src/app/app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/app/app.py) (lokale Version).
