@@ -3,20 +3,6 @@
 Use this template to document your project concisely and completely.
 Fill in all required fields. Keep answers short and precise.
 
-## Documentation Hint
-
-When possible, reference the corresponding code location directly in your description.
-
-### Example: Reference to a notebook section
-
-Reference to the header `## Data Preprocessing` in the notebook `analysis.ipynb`:
-> See *Data Preprocessing* in [`analysis.ipynb`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/notebooks/insurance_claim_intelligence.ipynb)
-
-### Example: Reference to Python code
-
-Reference to a single line in `model.py`, line 42:
-> [`model.py`, line 42](src/ml/train.py#L42)
-
 ---
 
 ## Project Metadata
