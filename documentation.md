@@ -10,7 +10,7 @@ When possible, reference the corresponding code location directly in your descri
 ### Example: Reference to a notebook section
 
 Reference to the header `## Data Preprocessing` in the notebook `analysis.ipynb`:
-> See *Data Preprocessing* in [`analysis.ipynb`](notebooks/01_ml_training.ipynb)
+> See *Data Preprocessing* in [`analysis.ipynb`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/notebooks/insurance_claim_intelligence.ipynb)
 
 ### Example: Reference to Python code
 
@@ -23,7 +23,7 @@ Reference to a single line in `model.py`, line 42:
 
 - **Project title:** Insurance Claim Intelligence — Multimodale KI-Bewertung von Versicherungsfällen
 - **Student:** Darren Glatzl
-- **GitHub repository URL:** https://github.com/DarrenOG/InsuranceClaimIntelligence
+- **GitHub repository URL:** https://github.com/sgDarren/InsuranceClaimIntelligence
 - **Deployment URL:** https://huggingface.co/spaces/DarrenOG/InsuranceClaim
 - **Submission date:** 07.06.2026
 
@@ -86,7 +86,7 @@ If a third block is selected, it is documented and graded separately as extra wo
   - CV + NLP zusammen berechnen `consistency_score` → stärkstes Fraud-Feature im ML-Block
   - ML-Output (`damage_type`, `insurance_type`) → RAG-Query für Deckungsauskunft
 
-See [`src/app/app.py`](src/app/app.py) für den vollständigen End-to-End Pipeline-Code.
+See [`src/app/app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/app/app.py) für den vollständigen End-to-End Pipeline-Code.
 
 ---
 
@@ -104,7 +104,7 @@ See [`src/app/app.py`](src/app/app.py) für den vollständigen End-to-End Pipeli
 
 #### 2A.2 Preprocessing and Features
 
-**EDA — Key Findings** (See [`models/eda_ml.png`](models/eda_ml.png)):
+**EDA — Key Findings** (See [`models/eda_ml.png`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/eda_ml.png)):
 
 - **Schadenhöhe:** Stark rechtsschief — Median ~CHF 5'000, 75% aller Claims unter CHF 20'000, Ausreisser bis CHF 100'000. → Log-Transformation erwogen, aber XGBoost robust gegenüber Schiefe.
 - **Fraud Rate:** 5.0% (503/10'000) — starke Klassenimbalance → `class_weight="balanced"` im Fraud-Classifier zwingend notwendig.
@@ -119,7 +119,7 @@ See [`src/app/app.py`](src/app/app.py) für den vollständigen End-to-End Pipeli
 
 - **Feature engineering and selection:** 19 strukturierte Features + 4 NLP-Features + 4 CV-Features = 27 Features total. Fraud-Fälle erhalten simuliert niedrigeren `consistency_score` (0.05-0.40) und höheren `fraud_signal_count`.
 
-See [`src/ml/train.py`](src/ml/train.py), Zeilen 1-80.
+See [`src/ml/train.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/ml/train.py), Zeilen 1-80.
 
 #### 2A.3 Model Selection
 
@@ -140,7 +140,7 @@ See [`src/ml/train.py`](src/ml/train.py), Zeilen 1-80.
 
 **Warum XGBoost als Winner:** Der marginale R²-Gewinn (+0.001) ist nicht ausschlaggebend. Entscheidend ist die Fraud Detection: XGBoost mit GridSearch und `class_weight="balanced"` erreicht AUC=0.931 und Precision_Fraud=1.00 — kein legitimer Kunde wird fälschlicherweise als Fraud markiert. Random Forest erreichte denselben R², aber XGBoost ist durch GridSearch vollständig konfigurierbar und liefert native SHAP-Kompatibilität für Explainability.
 
-See [`src/ml/train.py`](src/ml/train.py), Iterationen Zeilen 90-160.
+See [`src/ml/train.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/ml/train.py), Iterationen Zeilen 90-160.
 
 #### 2A.5 Evaluation and Error Analysis
 
@@ -160,7 +160,7 @@ See [`src/ml/train.py`](src/ml/train.py), Iterationen Zeilen 90-160.
 
 - **Error patterns and likely causes:** CV/NLP Features sind im ML-Block simuliert (synthetisch), da echte Modell-Outputs erst im produktiven System fliessen. **Wichtige Einschränkung:** Die Ablation Study beweist daher primär die Architektur-Entscheidung, nicht den tatsächlichen quantitativen Mehrwert. Im produktiven System — wo ViT echte `damage_type` Features liefert — wird der Mehrwert grösser erwartet. Die EDA belegt dies: Ø Schadenhöhe von Legitim vs. Fraud ist nahezu identisch (CHF ~16'500), was zeigt dass strukturierte Daten allein Fraud nicht erkennen können → multimodale Features (consistency_score) sind zwingend notwendig. Fraud Recall niedrig (0.18) wegen 5% Klassenimbalance; Precision=1.00 bewusst priorisiert (kein legitimer Kunde falsch markiert).
 
-See [`models/ablation_study.png`](models/ablation_study.png), [`models/shap_summary.png`](models/shap_summary.png).
+See [`models/ablation_study.png`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/ablation_study.png), [`models/shap_summary.png`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/shap_summary.png).
 
 #### 2A.6 Integration with Other Block(s)
 
@@ -197,7 +197,7 @@ See [`models/ablation_study.png`](models/ablation_study.png), [`models/shap_summ
   - 3 Rollen: `expert` (AVB-Klausel), `customer_service` (einfach), `fraud_analyst` (Plausibilität 1-10)
   - Grounded Prompt: AVB-Chunks als Kontext + strukturierte Antwort-Anforderung
 
-See [`src/nlp/rag_pipeline.py`](src/nlp/rag_pipeline.py).
+See [`src/nlp/rag_pipeline.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/nlp/rag_pipeline.py).
 
 #### 2B.3 Approach Selection
 
@@ -224,7 +224,7 @@ See [`src/nlp/rag_pipeline.py`](src/nlp/rag_pipeline.py).
   - **Haftpflicht-Fragen:** Das RAG antwortet schwächer bei Haftpflicht-spezifischen Fragen, da die AXA OPTIMA und MF-AVB primär Kasko-Deckungen behandeln. Ein separates Haftpflicht-AVB-Dokument würde die Abdeckung verbessern.
   - **Zero-Shot vs. RAG:** Zero-Shot (4.50) erreicht ähnliche Scores wie RAG Basic (4.50) weil GPT-4o-mini starkes Allgemeinwissen über Schweizer Versicherungsrecht hat. Der Mehrwert von RAG Expert (4.70) liegt primär in der Präzision der AVB-Klausel-Zitate und der konsistenten Rollenstruktur — nicht in der Faktenkorrektheit.
 
-See [`models/rag_results.json`](models/rag_results.json).
+See [`models/rag_results.json`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/rag_results.json).
 
 #### 2B.6 Integration with Other Block(s)
 
@@ -263,7 +263,7 @@ See [`models/rag_results.json`](models/rag_results.json).
   - WeightedRandomSampler: Klassenimbalance ausgeglichen
   - KEIN VerticalFlip: Fahrzeuge haben klare Oben/Unten-Orientierung
 
-See [`src/cv/train.py`](src/cv/train.py).
+See [`src/cv/train.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/cv/train.py).
 
 #### 2C.3 Model Selection
 
@@ -284,7 +284,7 @@ See [`src/cv/train.py`](src/cv/train.py).
 
 - **Metrics and/or visual checks:** Accuracy, F1 Macro, Classification Report per Klasse, Konfusionsmatrix
 
-- **EDA CV-Dataset** (See [`models/eda_cv.png`](models/eda_cv.png)):
+- **EDA CV-Dataset** (See [`models/eda_cv.png`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/eda_cv.png)):
   - Nach GPT-4o Relabeling + WeightedSampler-Balancing: dent=671, scratch=200, crack=200, glass_shatter=800, no_damage=800
   - scratch und crack waren im Original-Dataset nicht vorhanden → Oversampling notwendig
 
@@ -300,7 +300,7 @@ See [`src/cv/train.py`](src/cv/train.py).
   | **Accuracy** | | | **0.80** | **268** |
   | **F1 Macro** | | | **0.85** | |
 
-- **Konfusionsmatrix-Analyse** (See [`models/eda_cv.png`](models/eda_cv.png)):
+- **Konfusionsmatrix-Analyse** (See [`models/eda_cv.png`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/eda_cv.png)):
   - `dent` → 15x als `no_damage` verwechselt, 5x als `glass_shatter`: Dellen bei Totalschäden sehen optisch wie kein Schaden aus oder ähneln Glasbruch-Konturen
   - `glass_shatter` → 16x als `dent` klassifiziert: Splitter und eingedrückte Karosserie sind bei Frontalschäden visuell ähnlich
   - `no_damage` → 13x als `dent` verwechselt: Reflexionen und Schatten auf unbeschädigten Karosserien werden als Dellen interpretiert
@@ -308,7 +308,7 @@ See [`src/cv/train.py`](src/cv/train.py).
 
 - **Error patterns and limitations:** Die Hauptverwechslung `dent`↔`glass_shatter`↔`no_damage` ist erklärbar: alle drei zeigen bei Frontalschäden ähnliche Konturen. Mit mehr Trainingsdaten oder höherer Auflösung wäre Verbesserung möglich. GPT-4o (58%) schlechter als Fine-Tuning (80%) bestätigt: domänenspezifisches Training schlägt generalistisches Zero-Shot.
 
-See [`models/eda_cv.png`](models/eda_cv.png), [`models/cv_results.json`](models/cv_results.json).
+See [`models/eda_cv.png`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/eda_cv.png), [`models/cv_results.json`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/cv_results.json).
 
 #### 2C.6 Integration with Other Block(s)
 
@@ -333,12 +333,12 @@ See [`models/eda_cv.png`](models/eda_cv.png), [`models/cv_results.json`](models/
 - **Screenshot or short demo:**
 
   EDA ML-Dataset (Schadenhöhe, Fraud Rate, Versicherungstypen):
-  ![EDA ML](models/eda_ml.png)
+  ![EDA ML](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/eda_ml.png)
 
   CV Konfusionsmatrix + Klassen-Verteilung:
-  ![EDA CV](models/eda_cv.png)
+  ![EDA CV](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/eda_cv.png)
 
-See [`app.py`](app.py) (HuggingFace-Version), [`src/app/app.py`](src/app/app.py) (lokale Version).
+See [`app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/app.py) (HuggingFace-Version), [`src/app/app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/app/app.py) (lokale Version).
 
 ---
 
@@ -346,7 +346,7 @@ See [`app.py`](app.py) (HuggingFace-Version), [`src/app/app.py`](src/app/app.py)
 
 - **Environment setup:**
 ```bash
-git clone https://github.com/DarrenOG/InsuranceClaimIntelligence
+git clone https://github.com/sgDarren/InsuranceClaimIntelligence
 cd InsuranceClaimIntelligence
 pip install -r requirements.txt
 cp .env.example .env  # OPENAI_API_KEY eintragen
