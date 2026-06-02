@@ -102,7 +102,24 @@ See [`src/app/app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/bl
 
 - **Preprocessing steps:** Feature Engineering: `policy_age_days` (LOSS_DT - POLICY_EFF_DT), `report_delay_days`, `new_policy_flag` (< 90 Tage), `is_night` (Stunde < 6 oder > 22).
 
-- **Feature engineering and selection:** 19 strukturierte Features + 4 NLP-Features + 4 CV-Features = 27 Features total. Fraud-Fälle erhalten simuliert niedrigeren `consistency_score` (0.05-0.40) und höheren `fraud_signal_count`.
+- **Feature engineering and selection:** 19 strukturierte Features + 4 NLP-Features + 4 CV-Features = 27 Features total.
+
+  | Feature | Typ | Quelle | Begründung |
+  |---|---|---|---|
+  | `policy_age_days` | Engineered | Structured | LOSS_DT - POLICY_EFF_DT → neue Policen (<90 Tage) = höheres Fraud-Risiko |
+  | `report_delay_days` | Engineered | Structured | REPORT_DT - LOSS_DT → verzögerte Meldung = Fraud-Signal |
+  | `new_policy_flag` | Binary | Structured | policy_age_days < 90 → binäres Fraud-Feature |
+  | `is_night` | Binary | Structured | Stunde < 6 oder > 22 → Nachtunfälle häufiger fraudulös |
+  | `INSURANCE_TYPE_enc` | Encoded | Structured | LabelEncoder auf kategorische Spalte |
+  | `INCIDENT_SEVERITY_enc` | Encoded | Structured | LabelEncoder: Minor/Major/Total Loss |
+  | `damage_type_enc` | Encoded | **CV-Output** | ViT-Klassifikation → dent/scratch/crack/glass_shatter/no_damage |
+  | `damage_severity` | Numeric | **CV-Output** | 0=Minor, 1=Moderate, 2=Severe |
+  | `cv_confidence` | Numeric | **CV-Output** | ViT-Modellkonfidenz (0-1) |
+  | `consistency_score` | Numeric | **CV+NLP** | Cosine-Ähnlichkeit CV-Label ↔ NLP-Beschreibung → stärkstes Fraud-Feature |
+  | `fraud_signal_count` | Numeric | **NLP-Output** | Anzahl Fraud-Signalwörter in Beschreibung |
+  | `incident_type_nlp` | Encoded | **NLP-Output** | Unfalltyp aus Keyword-Matching (parking/rear_end/vandalism/theft/weather) |
+
+  Feature Selection: alle 27 Features verwendet — SHAP zeigt `INSURANCE_TYPE_enc`, `PREMIUM_AMOUNT` und `consistency_score` als Top-3.
 
 See [`src/ml/train.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/ml/train.py), Zeilen 1-80.
 
