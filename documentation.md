@@ -1,8 +1,5 @@
 # InsuranceClaim Intelligence / FS-2026 Projekt
 
-Use this template to document your project concisely and completely.
-Fill in all required fields. Keep answers short and precise.
-
 ---
 
 ## Project Metadata
