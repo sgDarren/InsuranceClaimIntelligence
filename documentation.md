@@ -160,6 +160,8 @@ See [`src/ml/train.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/b
 
   Fraud Detection: F1=0.311, **AUC=0.931**, Precision_Fraud=**1.00**
 
+  **Ablation Interpretation:** CV-Features allein (+CV: R²=0.696) verbessern stärker als Full Multimodal (R²=0.685), weil die simulierten NLP-Features im kombinierten Modell zusätzliches Rauschen einführen. Im produktiven System — mit echten NLP-Outputs — wird der Mehrwert von Full Multimodal höher erwartet als +CV allein.
+
 - **Error patterns and likely causes:** CV/NLP Features sind im ML-Block simuliert (synthetisch), da echte Modell-Outputs erst im produktiven System fliessen. **Wichtige Einschränkung:** Die Ablation Study beweist daher primär die Architektur-Entscheidung, nicht den tatsächlichen quantitativen Mehrwert. Im produktiven System — wo ViT echte `damage_type` Features liefert — wird der Mehrwert grösser erwartet. Die EDA belegt dies: Ø Schadenhöhe von Legitim vs. Fraud ist nahezu identisch (CHF ~16'500), was zeigt dass strukturierte Daten allein Fraud nicht erkennen können → multimodale Features (consistency_score) sind zwingend notwendig. Fraud Recall niedrig (0.18) wegen 5% Klassenimbalance; Precision=1.00 bewusst priorisiert (kein legitimer Kunde falsch markiert).
 
   **Warum kein End-to-End Training möglich war:** Das Kaggle-Dataset (`insurance_data.csv`) enthält ausschliesslich strukturierte Spalten — keine Schadenfotos, keine Freitextbeschreibungen. Das CV-Dataset (HuggingFace `SaiVaibhavS`) enthält Fotos, aber keine strukturierten Vertragsdaten. Beide Datasets teilen keinen gemeinsamen Claim-Identifier und können daher nicht verbunden werden. Ein echtes multimodales Dataset (Foto + Beschreibungstext + Vertragsdaten für denselben Claim) existiert nicht öffentlich, da Versicherungsfotos zusammen mit Vertragsdaten datenschutzrechtlich als personenbezogene Daten gelten (DSGVO) und von keinem Versicherer öffentlich geteilt werden. Die Simulation der CV/NLP Features ist daher die einzig mögliche Lösung im akademischen Kontext — in einem produktiven System würden diese Features direkt von den trainierten Modellen befüllt.
@@ -345,7 +347,7 @@ See [`models/eda_cv.png`](https://github.com/sgDarren/InsuranceClaimIntelligence
   Tab 3 — Ergebnisse & Ablation Study:
   ![App Tab 3](https://raw.githubusercontent.com/sgDarren/InsuranceClaimIntelligence/main/models/InsuranceClaimIntelligence_3.png)
 
-See [`app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/app.py) (HuggingFace-Version), [`src/app/app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/app/app.py) (lokale Version).
+See [`app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/app.py) (HuggingFace-Version, lokale Version identisch).
 
 ---
 
