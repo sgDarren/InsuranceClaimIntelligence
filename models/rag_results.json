@@ -1,0 +1,13 @@
+{
+  "chunks_indexed": 70,
+  "prompt_scores": {
+    "zero_shot": 4.5,
+    "rag_basic": 4.5,
+    "rag_expert": 4.7
+  },
+  "roles": [
+    "expert",
+    "customer_service",
+    "fraud_analyst"
+  ]
+}

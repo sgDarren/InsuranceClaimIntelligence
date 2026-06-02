@@ -1,0 +1,14 @@
+transformers
+torch
+torchvision
+sentence-transformers
+openai
+scikit-learn
+xgboost
+joblib
+pandas
+numpy
+pypdf
+requests
+Pillow
+accelerate

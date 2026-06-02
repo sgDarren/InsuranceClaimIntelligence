@@ -1,0 +1,18 @@
+{
+  "ml_block": {
+    "rmse_chf": 11624,
+    "r2": 0.721,
+    "fraud_auc": 0.931
+  },
+  "cv_block": {
+    "clip": 0.0,
+    "transfer": 0.6082,
+    "finetune": 0.7985,
+    "gpt4o": 0.58
+  },
+  "nlp_block": {
+    "zero_shot": 4.5,
+    "rag_basic": 4.5,
+    "rag_expert": 4.7
+  }
+}

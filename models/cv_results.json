@@ -1,0 +1,21 @@
+{
+  "classes": [
+    "dent",
+    "scratch",
+    "crack",
+    "glass_shatter",
+    "no_damage"
+  ],
+  "clip_zero_shot": {
+    "accuracy": 0.0
+  },
+  "transfer_learning": {
+    "accuracy": 0.6082089552238806
+  },
+  "fine_tuning": {
+    "accuracy": 0.7985074626865671
+  },
+  "gpt4o_vision": {
+    "accuracy": 0.58
+  }
+}
