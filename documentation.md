@@ -41,6 +41,8 @@ If a third block is selected, it is documented and graded separately as extra wo
 
 - **Problem statement:** Die manuelle Bewertung von Versicherungsschäden dauert 3-5 Tage, ist fehleranfällig und rund 10% der Claims sind betrügerisch. Bestehende Systeme nutzen nur strukturierte Daten und ignorieren Schadenbilder und -beschreibungen.
 
+  *Quellen: Insurance Europe (2023), Swiss Insurance Association SVV (2022). Das verwendete Kaggle-Dataset weist eine Fraud-Rate von 5% auf — in der Praxis liegt diese gemäss Branchenquellen bei 10-15%.*
+
 - **Goal:** Ein multimodales System das Schadenbilder (CV), Schadenbeschreibungen (NLP) und strukturierte Vertragsdaten (ML) kombiniert, um Schadenhöhe, Fraud-Score und Deckungswahrscheinlichkeit automatisch vorherzusagen.
 
 - **Success criteria:**
@@ -72,7 +74,7 @@ If a third block is selected, it is documented and graded separately as extra wo
   - CV + NLP zusammen berechnen `consistency_score` → stärkstes Fraud-Feature im ML-Block
   - ML-Output (`damage_type`, `insurance_type`) → RAG-Query für Deckungsauskunft
 
-See [`src/app/app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/app/app.py) für den vollständigen End-to-End Pipeline-Code.
+See [`src/app/app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/app/app.py) für den vollständigen End-to-End Pipeline-Code. See [`notebooks/insurance_claim_intelligence.ipynb`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/notebooks/insurance_claim_intelligence.ipynb) für das reproduzierbare Training-Notebook.
 
 ---
 
@@ -145,6 +147,8 @@ See [`src/ml/train.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/b
   Fraud Detection: F1=0.311, **AUC=0.931**, Precision_Fraud=**1.00**
 
 - **Error patterns and likely causes:** CV/NLP Features sind im ML-Block simuliert (synthetisch), da echte Modell-Outputs erst im produktiven System fliessen. **Wichtige Einschränkung:** Die Ablation Study beweist daher primär die Architektur-Entscheidung, nicht den tatsächlichen quantitativen Mehrwert. Im produktiven System — wo ViT echte `damage_type` Features liefert — wird der Mehrwert grösser erwartet. Die EDA belegt dies: Ø Schadenhöhe von Legitim vs. Fraud ist nahezu identisch (CHF ~16'500), was zeigt dass strukturierte Daten allein Fraud nicht erkennen können → multimodale Features (consistency_score) sind zwingend notwendig. Fraud Recall niedrig (0.18) wegen 5% Klassenimbalance; Precision=1.00 bewusst priorisiert (kein legitimer Kunde falsch markiert).
+
+  **Warum kein End-to-End Training möglich war:** Das Kaggle-Dataset (`insurance_data.csv`) enthält ausschliesslich strukturierte Spalten — keine Schadenfotos, keine Freitextbeschreibungen. Das CV-Dataset (HuggingFace `SaiVaibhavS`) enthält Fotos, aber keine strukturierten Vertragsdaten. Beide Datasets teilen keinen gemeinsamen Claim-Identifier und können daher nicht verbunden werden. Ein echtes multimodales Dataset (Foto + Beschreibungstext + Vertragsdaten für denselben Claim) existiert nicht öffentlich, da Versicherungsfotos zusammen mit Vertragsdaten datenschutzrechtlich als personenbezogene Daten gelten (DSGVO) und von keinem Versicherer öffentlich geteilt werden. Die Simulation der CV/NLP Features ist daher die einzig mögliche Lösung im akademischen Kontext — in einem produktiven System würden diese Features direkt von den trainierten Modellen befüllt.
 
 See [`models/ablation_study.png`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/ablation_study.png), [`models/shap_summary.png`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/shap_summary.png).
 
@@ -357,8 +361,8 @@ kaggle datasets download mastmustu/insurance-claims-fraud-data -p data/raw/ --un
 # ML Block (kein GPU nötig, ~10 Min)
 python src/ml/train.py
 
-# CV Block (Google Colab T4 GPU empfohlen, ~35 Min)
-# → Colab Notebook: notebooks/02_cv_training.ipynb
+# CV Block (Google Colab T4 GPU erforderlich, ~35 Min)
+# → Notebook: notebooks/insurance_claim_intelligence.ipynb (Block B)
 
 # NLP RAG Block (~3 Min)
 python src/nlp/rag_pipeline.py
@@ -377,6 +381,7 @@ python src/app/app.py   # Gradio App → http://127.0.0.1:7860
 
 - [x] Third selected block implemented with strong quality (NLP als 3. Block: RAG 4.70/5.0)
 - [x] More than two data sources used with clear added value (4 Quellen: Kaggle Insurance + HF Car Damage + AXA AVB PDF x2)
+- [x] A core section is done exceptionally well (CV Block: 4 Iterationen, GPT-4o Relabeling, Konfusionsmatrix-Analyse)
 - [x] Extended evaluation (Ablation Study 4 Experimente, LM-as-Judge 10 Fragen, Classification Report per Klasse)
 - [x] Ethics, bias, or fairness analysis
 - [x] Creative or exceptional use case (LLM-gestütztes Dataset Relabeling mit GPT-4o für versicherungskonforme Klassen)
