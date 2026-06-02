@@ -1,7 +1,4 @@
-# AI Applications Project Documentation Template
-
-Use this template to document your project concisely and completely.
-Fill in all required fields. Keep answers short and precise.
+# Insurance Claim Intelligence — ZHAW AI Applications FS2026
 
 ---
 
@@ -124,7 +121,7 @@ See [`src/ml/train.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/b
 |---|---|---|---|---|---|
 | 1 | Baseline | Alle Features, kein Tuning | Linear Regression | RMSE=CHF 21'173, R²=0.075 | — |
 | 2 | Ensemble | 200 Trees, Feature Engineering | Random Forest | RMSE=CHF 11'657, R²=0.720 | R² +645% |
-| 3 | Optimiert | GridSearch (n_estimators, max_depth, learning_rate), class_weight="balanced" | XGBoost | RMSE=CHF 11'624, R²=0.721, Fraud AUC=**0.931** | Fraud AUC +X% |
+| 3 | Optimiert | GridSearch (n_estimators, max_depth, learning_rate), class_weight="balanced" | XGBoost | RMSE=CHF 11'624, R²=0.721, Fraud AUC=**0.931** | Fraud AUC: 0.720→0.931 (+29%) |
 
 **Warum XGBoost als Winner:** Der marginale R²-Gewinn (+0.001) ist nicht ausschlaggebend. Entscheidend ist die Fraud Detection: XGBoost mit GridSearch und `class_weight="balanced"` erreicht AUC=0.931 und Precision_Fraud=1.00 — kein legitimer Kunde wird fälschlicherweise als Fraud markiert. Random Forest erreichte denselben R², aber XGBoost ist durch GridSearch vollständig konfigurierbar und liefert native SHAP-Kompatibilität für Explainability.
 
@@ -323,15 +320,12 @@ See [`models/eda_cv.png`](https://github.com/sgDarren/InsuranceClaimIntelligence
 - **Screenshot or short demo:**
 
   Tab 1 — Schadenanalyse (CV + NLP + ML Analyse):
-  
   ![App Tab 1](https://raw.githubusercontent.com/sgDarren/InsuranceClaimIntelligence/main/models/InsuranceClaimIntelligence_1.png)
 
   Tab 2 — Deckungsauskunft (RAG + AXA AVB):
-  
   ![App Tab 2](https://raw.githubusercontent.com/sgDarren/InsuranceClaimIntelligence/main/models/InsuranceClaimIntelligence_2.png)
 
   Tab 3 — Ergebnisse & Ablation Study:
-  
   ![App Tab 3](https://raw.githubusercontent.com/sgDarren/InsuranceClaimIntelligence/main/models/InsuranceClaimIntelligence_3.png)
 
 See [`app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/app.py) (HuggingFace-Version), [`src/app/app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/app/app.py) (lokale Version).
@@ -376,7 +370,7 @@ python src/nlp/rag_pipeline.py
 python src/app/app.py   # Gradio App → http://127.0.0.1:7860
 ```
 
-- **Reproducibility notes:** SEED=42 in allen Modulen gesetzt. GPU: Tesla T4 (Google Colab). Alle Modelle in `models/` gespeichert. `requirements.txt` mit geprüften Versionen.
+- **Reproducibility notes:** SEED=42 in allen Modulen gesetzt. CV Block trainiert auf Google Colab T4 GPU (~35 Min). ML und NLP Blöcke laufen auf CPU (~10 Min resp. ~3 Min). Alle Modelle in `models/` gespeichert. `requirements.txt` mit geprüften Versionen.
 
 ---
 
