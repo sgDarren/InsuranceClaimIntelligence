@@ -60,7 +60,7 @@ If a third block is selected, it is documented and graded separately as extra wo
 📝 Text → [NLP Block: RAG] → incident_type, fraud_signals
                 ↓
     consistency_score = f(CV_label, NLP_description)
-    → Stärkstes Fraud-Signal (nur multimodal berechenbar!)
+    → Zentrales Plausibilitäts- und Triage-Feature (nur multimodal berechenbar!)
                 ↓
 📋 Daten → [ML Block: XGBoost] → Schadenhöhe CHF, Fraud-Score
                 ↓
@@ -73,7 +73,7 @@ If a third block is selected, it is documented and graded separately as extra wo
   - CV + NLP zusammen berechnen `consistency_score` → stärkstes Fraud-Feature im ML-Block
   - ML-Output (`damage_type`, `insurance_type`) → RAG-Query für Deckungsauskunft
 
-See [`src/app/app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/app/app.py) für den vollständigen End-to-End Pipeline-Code. See [`notebooks/insurance_claim_intelligence.ipynb`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/notebooks/insurance_claim_intelligence.ipynb) für das reproduzierbare Training-Notebook.
+See [`app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/app.py) für den vollständigen End-to-End Pipeline-Code. See [`notebooks/insurance_claim_intelligence.ipynb`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/notebooks/insurance_claim_intelligence.ipynb) für das reproduzierbare Training-Notebook.
 
 ---
 
@@ -377,11 +377,12 @@ See [`models/eda_cv.png`](https://github.com/sgDarren/InsuranceClaimIntelligence
 
 - **Deployment URL:** https://huggingface.co/spaces/DarrenOG/InsuranceClaim
 
-- **Model loading status:** Die App lädt beim Start alle Modelle — kein Demo-Fallback:
+- **Model loading status:** Die Kernmodelle für CV und ML müssen erfolgreich geladen werden — andernfalls bricht die App mit `RuntimeError` ab. Für das optionale Consistency-Modell und die RAG-PDFs existieren explizite Fallbacks, die im Log sichtbar sind:
   - `ML Modelle geladen` → XGBoost + RandomForest aktiv
   - `ViT geladen` → echte CV-Klassifikation aktiv
   - `NLP RAG bereit: 70 Chunks` → echte AXA AVB PDF-Chunks aktiv
-  - Falls ein Modell fehlt → expliziter `RuntimeError` (kein stiller Demo-Modus)
+  - `Consistency Modell geladen` → ML-basierte Konsistenzprüfung aktiv (sonst Heuristik)
+  - Falls ViT oder ML fehlen → expliziter `RuntimeError` (kein stiller Demo-Modus)
 
 - **Main user flow:**
   1. Tab "Schadenanalyse": Bild hochladen + Beschreibung + Vertragsdaten → CV/NLP/ML Analyse → Schadenhöhe + Fraud-Score + Entscheidung
