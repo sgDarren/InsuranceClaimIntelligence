@@ -1,8 +1,10 @@
+# App
+gradio
+openai
+sentence-transformers
 transformers
 torch
 torchvision
-sentence-transformers
-openai
 scikit-learn
 xgboost
 joblib
@@ -12,3 +14,11 @@ pypdf
 requests
 Pillow
 accelerate
+
+# Training
+matplotlib
+seaborn
+shap
+datasets
+evaluate
+kaggle
