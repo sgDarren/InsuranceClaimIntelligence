@@ -43,12 +43,11 @@ try:
     with open(model_path("label_map.json")) as f:
         id2label = json.load(f)
     INSURANCE_CLASSES = list(id2label.values())
-    print(f"✅ ViT geladen: {INSURANCE_CLASSES}")
+    print(f"ViT geladen: {INSURANCE_CLASSES}")
 except Exception as e:
-    print(f"⚠️ ViT nicht gefunden: {e} — Demo-Modus")
-    vit_classifier   = None
-    INSURANCE_CLASSES = ["dent", "scratch", "crack", "glass_shatter", "no_damage"]
-    id2label         = {str(i): l for i, l in enumerate(INSURANCE_CLASSES)}
+    print(f"FEHLER: ViT Modell konnte nicht geladen werden: {e}")
+    print(f"Stelle sicher dass models/vit-damage-final/ vorhanden ist.")
+    raise RuntimeError(f"ViT Modell nicht gefunden: {e}")
 
 # ML: XGBoost + Fraud Classifier
 try:
@@ -56,11 +55,21 @@ try:
     fraud_model  = joblib.load(model_path("fraud_classifier.pkl"))
     with open(model_path("feature_cols.json")) as f:
         FEATURE_COLS = json.load(f)
-    print("✅ ML Modelle geladen")
+    print("ML Modelle geladen")
 except Exception as e:
-    print(f"⚠️ ML Modelle nicht gefunden: {e}")
-    xgb_model = fraud_model = None
-    FEATURE_COLS = []
+    print(f"FEHLER: ML Modelle konnten nicht geladen werden: {e}")
+    raise RuntimeError(f"ML Modelle nicht gefunden: {e}")
+
+# Multimodal Consistency Model (optional)
+try:
+    consistency_model = joblib.load(model_path("consistency_model.pkl"))
+    with open(model_path("consistency_feature_cols.json")) as f:
+        CONSISTENCY_FEATURE_COLS = json.load(f)
+    print("Consistency Modell geladen")
+except Exception as e:
+    print(f"Consistency Modell nicht gefunden: {e} — heuristischer Fallback")
+    consistency_model = None
+    CONSISTENCY_FEATURE_COLS = []
 
 # NLP: SentenceTransformer + Embeddings
 try:
@@ -166,19 +175,68 @@ def extract_nlp_features(description: str) -> dict:
     }
 
 def compute_consistency_score(damage_type: str, severity: int, description: str) -> float:
-    severity_words = {
-        0: ["klein", "leicht", "kratzer", "minor", "slight"],
-        1: ["mittel", "moderate", "medium"],
-        2: ["schwer", "total", "stark", "severe", "crash", "totalschaden"],
-    }
+    """CV-NLP Konsistenzpruefung via trainiertem Consistency Model.
+    Gibt Wahrscheinlichkeit zurueck dass Bild und Beschreibung konsistent sind (0=inkonsistent, 1=konsistent).
+    Fallback auf Heuristik wenn Modell nicht geladen.
+    """
     desc_lower = description.lower()
-    expected   = severity_words.get(severity, [])
-    opposite   = [w for s, ws in severity_words.items() if s != severity for w in ws]
-    match      = sum(1 for w in expected if w in desc_lower) / max(len(expected), 1)
-    mismatch   = sum(1 for w in opposite if w in desc_lower) / max(len(opposite), 1)
-    score      = max(0.0, min(1.0, match - mismatch * 0.5 + 0.5))
-    if damage_type == "glass_shatter" and any(w in desc_lower for w in ["klein", "kratzer", "minor"]):
-        score = 0.08
+
+    FRAUD_SIGNALS_APP  = ["totalschaden", "gestohlen", "keine zeugen", "dringend",
+                          "sofort", "bar bezahlt", "keine quittung", "auszahlung"]
+    INCIDENT_TYPES_APP = {
+        "parking":   ["parkschaden", "parklücke", "parkplatz"],
+        "vandalism": ["vandalismus", "schlüssel", "zerkratzt"],
+        "collision": ["kollision", "auffahrunfall", "aufprall"],
+        "theft":     ["gestohlen", "einbruch", "diebstahl"],
+        "weather":   ["hagel", "sturm", "steinschlag"],
+    }
+    SEVERITY_HIGH = ["totalschaden", "massiv", "komplett", "nicht fahrbereit", "airbags"]
+    SEVERITY_LOW  = ["kleiner", "oberflächlich", "kaum", "minimal", "leicht"]
+    F1_MAP_APP    = {"dent": 0.66, "scratch": 0.98, "crack": 0.98,
+                     "glass_shatter": 0.83, "no_damage": 0.80}
+    LABEL2ID_APP  = {l: i for i, l in enumerate(INSURANCE_CLASSES)}
+
+    incident_type = 0
+    for i, (itype, keywords) in enumerate(INCIDENT_TYPES_APP.items()):
+        if any(kw in desc_lower for kw in keywords):
+            incident_type = i + 1; break
+
+    fraud_count = sum(1 for s in FRAUD_SIGNALS_APP if s in desc_lower)
+    desc_length = len(description.split())
+
+    desc_emb = embedder.encode([description])
+    cv_emb   = embedder.encode([damage_type])
+    cos_sim  = float(np.dot(cv_emb, desc_emb.T) /
+                     (np.linalg.norm(cv_emb) * np.linalg.norm(desc_emb) + 1e-8))
+    cos_sim  = float(np.clip(cos_sim, 0.0, 1.0))
+
+    has_high     = any(w in desc_lower for w in SEVERITY_HIGH)
+    has_low      = any(w in desc_lower for w in SEVERITY_LOW)
+    sev_mismatch = 0
+    if damage_type in ("dent", "scratch", "crack") and has_high:
+        sev_mismatch = 1
+    if damage_type == "glass_shatter" and has_low:
+        sev_mismatch = 1
+
+    # Consistency Model verwenden wenn verfügbar
+    if consistency_model is not None:
+        try:
+            import pandas as pd_inner
+            X_cons = pd_inner.DataFrame([{
+                "cv_label_enc":       LABEL2ID_APP.get(damage_type, 0),
+                "cv_confidence":      F1_MAP_APP.get(damage_type, 0.75),
+                "nlp_incident_type":  incident_type,
+                "fraud_signal_count": fraud_count,
+                "description_length": desc_length,
+                "cosine_similarity":  cos_sim,
+                "severity_mismatch":  sev_mismatch,
+            }])
+            return round(float(consistency_model.predict_proba(X_cons)[0][1]), 3)
+        except Exception:
+            pass
+
+    # Heuristischer Fallback
+    score = max(0.0, min(1.0, cos_sim - sev_mismatch * 0.4 - fraud_count * 0.15 + 0.3))
     return round(score, 3)
 
 def rag_retrieve(query: str, n: int = 4):
@@ -205,7 +263,7 @@ def classify_damage(image: Image.Image) -> dict:
             "damage_severity": severity_map.get(label, 1),
         }
     except Exception as e:
-        return {"damage_type": "dent", "cv_confidence": 0.75, "damage_severity": 1, "error": str(e)}
+        raise RuntimeError(f"ViT Klassifikation fehlgeschlagen: {e}")
 
 # ══════════════════════════════════════════════════════════════
 # ML BLOCK
@@ -216,21 +274,6 @@ INS_MAP = {"liability": 0, "partial": 1, "full": 2,
 def predict_claim(cv_result: dict, nlp_feats: dict, consistency: float,
                   premium: float, age: int, tenure: int,
                   insurance_type: str, franchise: int) -> dict:
-    if xgb_model is None:
-        # Demo-Modus ohne Modell
-        import random
-        base = {"dent": 3500, "scratch": 800, "crack": 1200,
-                "glass_shatter": 600, "no_damage": 0}
-        amount = base.get(cv_result["damage_type"], 2000) * (1 + random.uniform(-0.2, 0.3))
-        fraud  = 0.9 if consistency < 0.2 else 0.1
-        return {
-            "claim_amount_chf": round(max(0, amount - franchise), 2),
-            "fraud_score":      round(fraud, 3),
-            "confidence":       0.72,
-            "priority":         "Hoch" if amount > 5000 else "Mittel",
-            "manual_review":    fraud > 0.7,
-        }
-
     import pandas as pd
     data = {
         "PREMIUM_AMOUNT":           premium,
