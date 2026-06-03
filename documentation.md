@@ -48,7 +48,7 @@ If a third block is selected, it is documented and graded separately as extra wo
   - ML: R² ≥ 0.70 → erreicht: **R² = 0.725 (Random Forest)** ✅
   - CV: Accuracy ≥ 0.75 → erreicht: **79.85%, F1 Macro = 0.85** ✅
   - RAG: LM-Judge ≥ 4.0/5.0 → erreicht: **4.70/5.0** ✅
-  - Fraud Detection: AUC ohne echte multimodale Daten = 0.486 — Yang et al. (2023) belegen +12.24% AUC mit echten multimodalen Daten ⚠️
+  - Fraud Detection: AUC ohne echte multimodale Daten = 0.486 — Yang et al. (2023) belegen +12.24% AUC mit echten multimodalen Daten 
   - consistency_score (CV↔NLP) als multimodales Feature konzeptionell implementiert ✅
 
 ### 1.2 Integration Logic
