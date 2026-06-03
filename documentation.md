@@ -193,6 +193,37 @@ See [`models/ablation_study.png`](https://github.com/sgDarren/InsuranceClaimInte
 
 ---
 
+### 2D. Multimodal Consistency Benchmark (Bonus)
+
+**Warum nötig:** Da kein öffentliches Dataset mit Bild + Text + Claimdaten existiert, kann die CV-NLP-Integration nicht im ML-Training direkt nachgewiesen werden. Als separate, prüfbare Evaluation wurde ein Consistency-Benchmark konstruiert.
+
+**Dataset-Konstruktion** (See [`src/multimodal/build_consistency_dataset.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/multimodal/build_consistency_dataset.py)):
+
+| Fall | Beschreibung | Label |
+|---|---|---|
+| A — Konsistent | Bild und Text passen (z.B. Delle + "Delle an Fahrertür") | 1 |
+| B — Falsche Schadenart | Text beschreibt anderen Schaden (z.B. Delle + "Glasbruch") | 0 |
+| C — Schweregrad-Mismatch | Text übertreibt/untertreibt (z.B. Kratzer + "Totalschaden") | 0 |
+| D — Fraud-Signal | Beschreibung mit Fraud-Indikatoren (z.B. "dringend, keine Zeugen") | 0 |
+
+5 Klassen × 50 Beispiele × 4 Falltypen = **1000 Fälle** (250 konsistent, 750 inkonsistent)
+
+**Modelltraining** (See [`src/multimodal/train_consistency.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/multimodal/train_consistency.py)):
+
+Features: `cv_label_enc`, `cv_confidence`, `nlp_incident_type`, `fraud_signal_count`, `description_length`, `cosine_similarity`, `severity_mismatch`
+
+| Modell | F1 | AUC |
+|---|---|---|
+| Logistic Regression (Baseline) | 0.600 | 0.863 |
+| Random Forest ← Winner | 1.000 | 1.000 |
+| XGBoost | 1.000 | 1.000 |
+
+**Wichtige Einschränkung:** AUC=1.00 reflektiert den regelbasiert konstruierten Benchmark — nicht realistische Fraud-Detection-Leistung. Die hohen Scores zeigen dass die Entscheidungslogik auf dem kuratierten Benchmark funktioniert. In der App wird `consistency_model.predict_proba()` genutzt; bei `consistency_prob < 0.3` → manuelle Prüfung.
+
+**Nutzen:** Belegt technische CV-NLP-Integration über Modelloutputs und decision logic — genau wie vom Modul gefordert.
+
+---
+
 ### 2B. NLP
 
 #### 2B.1 Data Source(s)
@@ -346,11 +377,11 @@ See [`models/eda_cv.png`](https://github.com/sgDarren/InsuranceClaimIntelligence
 
 - **Deployment URL:** https://huggingface.co/spaces/DarrenOG/InsuranceClaim
 
-- **Model loading status:** Die App lädt beim Start alle Modelle und gibt den Status aus:
+- **Model loading status:** Die App lädt beim Start alle Modelle — kein Demo-Fallback:
   - `ML Modelle geladen` → XGBoost + RandomForest aktiv
   - `ViT geladen` → echte CV-Klassifikation aktiv
   - `NLP RAG bereit: 70 Chunks` → echte AXA AVB PDF-Chunks aktiv
-  - Falls ViT nicht geladen → Demo-Modus mit explizitem Hinweis in Logs
+  - Falls ein Modell fehlt → expliziter `RuntimeError` (kein stiller Demo-Modus)
 
 - **Main user flow:**
   1. Tab "Schadenanalyse": Bild hochladen + Beschreibung + Vertragsdaten → CV/NLP/ML Analyse → Schadenhöhe + Fraud-Score + Entscheidung
