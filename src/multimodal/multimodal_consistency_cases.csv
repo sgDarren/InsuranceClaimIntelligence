@@ -1,0 +1,1001 @@
+idx,true_damage_label,description,consistency_label,mismatch_type,severity_label
+30,crack,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,minor
+34,glass_shatter,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,medium
+35,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+15,glass_shatter,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",1,none,medium
+2,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+19,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+6,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+28,crack,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+14,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+34,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+2,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+19,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+9,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+43,no_damage,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,none
+34,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+24,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+20,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+20,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+40,glass_shatter,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+29,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+37,crack,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+43,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+42,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+31,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+2,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+8,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+25,dent,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+46,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+25,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+36,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+36,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+34,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+5,glass_shatter,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,medium
+24,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+42,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+49,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+21,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+46,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+25,no_damage,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,none
+14,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+32,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+24,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+28,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+43,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+24,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+19,scratch,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+31,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+0,glass_shatter,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,medium
+9,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+9,no_damage,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,none
+42,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+19,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+15,scratch,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,minor
+44,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+5,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+7,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+4,glass_shatter,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,medium
+2,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+5,scratch,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,minor
+5,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+24,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+13,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+35,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+2,scratch,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,minor
+1,glass_shatter,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",1,none,medium
+23,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+15,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+16,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+17,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+35,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+26,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+23,crack,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+47,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+35,glass_shatter,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,medium
+23,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+22,scratch,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+13,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+9,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+47,crack,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+26,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+19,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+16,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+18,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+16,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+29,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+37,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+49,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+28,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+38,glass_shatter,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,medium
+31,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+45,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+12,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+30,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+4,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+46,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+9,crack,Bruch am Stossfänger nach Kollision mit Randstein.,1,none,minor
+41,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+22,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+15,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+6,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+29,glass_shatter,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",1,none,medium
+37,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+34,no_damage,"Fahrzeug in einwandfreiem Zustand, keine Beeinträchtigungen.",1,none,none
+14,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+8,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+11,glass_shatter,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",1,none,medium
+38,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+39,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+42,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+29,no_damage,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,none
+32,crack,Bruch am Stossfänger nach Kollision mit Randstein.,1,none,minor
+5,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+46,no_damage,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,none
+4,no_damage,Überprüfung ergab keine äusserlichen Schäden am Fahrzeug.,1,none,none
+21,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+8,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+46,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+44,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+33,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+23,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+23,no_damage,Überprüfung ergab keine äusserlichen Schäden am Fahrzeug.,1,none,none
+6,crack,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+28,glass_shatter,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,medium
+15,scratch,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,1,none,minor
+9,scratch,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,minor
+39,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+45,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+11,crack,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,minor
+16,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+0,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+49,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+12,no_damage,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,none
+16,scratch,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+48,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+32,crack,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,minor
+13,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+30,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+3,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+6,dent,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,medium
+18,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+11,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+11,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+30,glass_shatter,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,medium
+20,scratch,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+23,no_damage,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,none
+28,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+2,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+11,scratch,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,1,none,minor
+5,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+30,scratch,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,minor
+10,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+39,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+44,no_damage,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,none
+7,crack,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,minor
+35,no_damage,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,none
+15,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+27,scratch,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,minor
+24,glass_shatter,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,medium
+15,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+21,no_damage,"Fahrzeug in einwandfreiem Zustand, keine Beeinträchtigungen.",1,none,none
+48,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+41,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+12,glass_shatter,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,medium
+12,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+16,no_damage,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,none
+17,glass_shatter,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",1,none,medium
+24,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+22,glass_shatter,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,medium
+28,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+27,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+40,scratch,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+19,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+27,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+47,no_damage,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,none
+21,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+40,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+13,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+14,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+0,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+19,glass_shatter,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,medium
+23,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+17,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+44,scratch,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,minor
+31,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+11,no_damage,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,none
+34,dent,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,medium
+38,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+41,scratch,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+35,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+37,glass_shatter,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+37,no_damage,"Fahrzeug in einwandfreiem Zustand, keine Beeinträchtigungen.",1,none,none
+7,no_damage,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,none
+14,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+49,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+3,scratch,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+2,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+33,scratch,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,1,none,minor
+2,scratch,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,1,none,minor
+3,glass_shatter,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,medium
+19,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+7,dent,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+33,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+23,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+39,crack,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+9,no_damage,Überprüfung ergab keine äusserlichen Schäden am Fahrzeug.,1,none,none
+49,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+41,dent,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+29,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+23,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+6,no_damage,Überprüfung ergab keine äusserlichen Schäden am Fahrzeug.,1,none,none
+16,dent,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+35,dent,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,medium
+31,no_damage,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,none
+6,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+13,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+32,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+16,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+12,scratch,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+26,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+27,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+26,scratch,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+33,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+43,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+12,dent,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,medium
+24,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+0,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+36,crack,Bruch am Stossfänger nach Kollision mit Randstein.,1,none,minor
+37,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+26,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+34,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+36,scratch,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,1,none,minor
+48,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+20,crack,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+43,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+8,dent,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,medium
+7,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+7,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+40,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+48,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+33,scratch,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,minor
+0,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+1,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+28,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+49,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+26,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+27,dent,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,medium
+7,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+19,dent,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+21,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+21,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+20,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+47,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+47,glass_shatter,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+23,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+49,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+30,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+29,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+29,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+30,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+1,dent,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,medium
+32,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+16,crack,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+24,dent,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,medium
+16,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+39,scratch,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,minor
+17,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+49,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+45,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+7,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+45,scratch,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+22,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+29,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+25,no_damage,"Fahrzeug in einwandfreiem Zustand, keine Beeinträchtigungen.",1,none,none
+12,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+30,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+2,dent,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,medium
+49,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+0,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+20,dent,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,medium
+45,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+46,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+49,glass_shatter,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,medium
+9,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+22,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+2,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+29,glass_shatter,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+39,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+12,crack,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,minor
+6,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+37,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+36,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+49,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+25,crack,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+16,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+40,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+17,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+33,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+7,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+1,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+38,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+35,crack,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+10,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+20,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+5,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+44,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+37,no_damage,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,none
+33,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+44,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+33,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+41,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+48,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+32,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+45,crack,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,minor
+26,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+12,crack,Bruch am Stossfänger nach Kollision mit Randstein.,1,none,minor
+13,crack,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+7,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+38,scratch,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,1,none,minor
+32,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+3,scratch,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,1,none,minor
+19,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+37,dent,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,1,none,medium
+25,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+7,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+44,glass_shatter,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,medium
+26,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+35,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+21,crack,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+27,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+33,dent,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,medium
+25,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+27,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+30,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+7,glass_shatter,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,medium
+0,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+29,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+26,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+36,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+18,no_damage,"Fahrzeug in einwandfreiem Zustand, keine Beeinträchtigungen.",1,none,none
+33,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+19,crack,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,minor
+1,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+43,dent,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,1,none,medium
+31,dent,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,medium
+48,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+5,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+38,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+25,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+22,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+34,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+45,dent,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,medium
+18,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+23,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+17,dent,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+22,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+32,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+25,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+6,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+31,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+36,dent,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,1,none,medium
+5,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+45,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+33,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+12,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+41,dent,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,1,none,medium
+7,dent,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,1,none,medium
+43,glass_shatter,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,medium
+48,dent,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,medium
+47,scratch,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,1,none,minor
+13,no_damage,Überprüfung ergab keine äusserlichen Schäden am Fahrzeug.,1,none,none
+42,dent,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,medium
+26,glass_shatter,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,medium
+35,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+43,dent,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+1,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+36,glass_shatter,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+19,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+18,dent,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,medium
+27,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+3,no_damage,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,none
+9,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+36,dent,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,medium
+48,glass_shatter,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",1,none,medium
+8,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+5,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+30,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+25,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+33,dent,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,1,none,medium
+47,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+43,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+46,dent,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+10,dent,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,medium
+24,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+27,dent,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,1,none,medium
+47,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+14,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+1,crack,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,minor
+10,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+39,glass_shatter,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,medium
+49,no_damage,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,none
+6,dent,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,1,none,medium
+16,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+34,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+32,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+4,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+23,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+31,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+34,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+12,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+26,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+29,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+30,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+45,glass_shatter,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+16,scratch,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,1,none,minor
+4,no_damage,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,none
+27,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+20,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+8,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+29,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+11,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+4,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+28,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+20,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+42,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+8,crack,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,minor
+41,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+20,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+15,dent,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+9,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+18,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+21,scratch,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+40,scratch,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,1,none,minor
+38,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+14,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+19,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+3,dent,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,1,none,medium
+45,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+42,scratch,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,1,none,minor
+20,no_damage,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,none
+3,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+5,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+43,crack,Bruch am Stossfänger nach Kollision mit Randstein.,1,none,minor
+42,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+13,glass_shatter,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,medium
+36,crack,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,minor
+45,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+8,glass_shatter,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+44,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+16,glass_shatter,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,medium
+18,glass_shatter,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+46,crack,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,minor
+18,no_damage,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,none
+48,scratch,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+40,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+12,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+8,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+21,no_damage,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,none
+17,glass_shatter,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,medium
+43,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+3,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+18,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+28,dent,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,medium
+49,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+40,no_damage,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,none
+47,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+26,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+28,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+4,crack,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+31,crack,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,minor
+14,crack,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,minor
+2,crack,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,minor
+23,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+32,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+22,dent,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,medium
+34,scratch,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,1,none,minor
+47,no_damage,"Fahrzeug in einwandfreiem Zustand, keine Beeinträchtigungen.",1,none,none
+30,no_damage,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,none
+33,no_damage,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,none
+1,glass_shatter,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,medium
+48,crack,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,minor
+2,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+23,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+2,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+49,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+33,crack,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+10,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+10,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+32,scratch,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+41,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+24,crack,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,minor
+19,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+49,crack,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,minor
+39,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+25,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+6,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+44,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+11,crack,Bruch am Stossfänger nach Kollision mit Randstein.,1,none,minor
+4,crack,Bruch am Stossfänger nach Kollision mit Randstein.,1,none,minor
+17,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+20,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+20,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+44,dent,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,medium
+48,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+27,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+48,glass_shatter,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,medium
+40,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+21,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+45,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+39,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+37,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+14,scratch,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+34,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+33,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+3,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+31,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+39,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+5,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+44,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+45,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+5,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+39,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+16,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+15,no_damage,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,none
+35,scratch,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,1,none,minor
+7,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+37,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+8,no_damage,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,none
+0,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+7,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+23,dent,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,medium
+39,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+17,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+5,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+21,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+11,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+8,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+38,dent,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,medium
+18,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+32,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+11,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+47,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+17,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+9,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+21,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+29,dent,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,medium
+35,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+28,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+6,no_damage,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,none
+47,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+31,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+29,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+18,crack,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+23,glass_shatter,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,medium
+14,dent,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+15,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+28,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+42,scratch,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,minor
+17,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+11,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+37,scratch,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+48,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+49,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+8,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+34,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+15,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+10,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+18,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+26,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+35,scratch,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+41,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+37,dent,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,medium
+31,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+46,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+12,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+38,scratch,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,minor
+31,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+35,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+17,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+49,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+6,glass_shatter,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,medium
+30,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+4,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+2,no_damage,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,none
+47,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+2,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+1,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+34,crack,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,minor
+5,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+9,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+43,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+11,scratch,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+7,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+16,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+38,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+14,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+38,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+21,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+0,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+42,crack,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+35,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+4,dent,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,medium
+31,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+30,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+13,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+14,glass_shatter,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,medium
+41,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+47,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+28,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+4,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+1,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+45,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+25,scratch,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,minor
+39,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+28,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+30,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+21,glass_shatter,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,medium
+44,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+29,crack,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,minor
+46,no_damage,Überprüfung ergab keine äusserlichen Schäden am Fahrzeug.,1,none,none
+11,dent,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+27,no_damage,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,none
+39,dent,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+12,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+42,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+4,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+27,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+12,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+42,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+35,no_damage,Überprüfung ergab keine äusserlichen Schäden am Fahrzeug.,1,none,none
+28,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+38,no_damage,Überprüfung ergab keine äusserlichen Schäden am Fahrzeug.,1,none,none
+20,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+20,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+29,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+19,no_damage,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,none
+6,scratch,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+6,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+38,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+9,crack,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+37,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+41,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+7,scratch,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+9,dent,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,medium
+41,no_damage,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,none
+43,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+17,crack,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,minor
+41,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+12,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+26,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+10,no_damage,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,none
+48,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+13,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+16,no_damage,Überprüfung ergab keine äusserlichen Schäden am Fahrzeug.,1,none,none
+25,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+42,no_damage,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,none
+7,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+44,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+42,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+40,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+27,no_damage,Überprüfung ergab keine äusserlichen Schäden am Fahrzeug.,1,none,none
+38,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+0,no_damage,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,none
+48,no_damage,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,none
+38,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+27,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+6,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+22,glass_shatter,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",1,none,medium
+25,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+5,crack,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+4,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+37,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+46,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+45,glass_shatter,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",1,none,medium
+18,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+29,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+13,dent,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+37,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+0,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+36,no_damage,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,none
+1,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+14,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+10,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+40,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+2,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+1,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+9,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+13,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+12,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+13,scratch,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+25,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+36,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+42,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+5,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+33,glass_shatter,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",1,none,medium
+22,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+15,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+2,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+24,scratch,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+3,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+37,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+47,glass_shatter,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",1,none,medium
+10,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+22,no_damage,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,none
+37,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+21,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+22,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+36,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+36,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+30,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+32,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+34,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+14,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+37,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+15,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+31,scratch,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+46,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+30,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+13,no_damage,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,none
+2,glass_shatter,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",1,none,medium
+35,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+39,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+49,dent,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,medium
+2,glass_shatter,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+19,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+23,scratch,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+0,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+30,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+45,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+0,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+9,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+11,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+3,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+33,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+41,glass_shatter,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+26,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+8,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+21,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+32,dent,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,medium
+9,glass_shatter,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,medium
+0,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+46,glass_shatter,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",1,none,medium
+42,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+33,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+28,no_damage,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,none
+4,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+10,glass_shatter,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+28,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+38,glass_shatter,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",1,none,medium
+1,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+29,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+6,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+18,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+40,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+46,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+43,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+27,crack,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,minor
+16,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+4,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+10,crack,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+24,crack,Bruch am Stossfänger nach Kollision mit Randstein.,1,none,minor
+28,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+22,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+8,scratch,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,1,none,minor
+17,no_damage,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,none
+1,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+17,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+43,scratch,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,minor
+45,no_damage,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,none
+10,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+8,scratch,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+46,glass_shatter,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+19,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+29,scratch,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+12,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+2,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+24,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+27,glass_shatter,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,medium
+39,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+14,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+36,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+6,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+8,glass_shatter,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",1,none,medium
+20,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+44,scratch,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,1,none,minor
+46,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+6,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+38,no_damage,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,none
+3,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+18,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+36,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+26,crack,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+9,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+46,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+32,no_damage,"Fahrzeug in einwandfreiem Zustand, keine Beeinträchtigungen.",1,none,none
+26,no_damage,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,none
+4,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+13,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+0,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+11,glass_shatter,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+11,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+39,crack,Bruch am Stossfänger nach Kollision mit Randstein.,1,none,minor
+39,no_damage,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,none
+44,crack,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+48,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+21,dent,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+10,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+24,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+39,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+31,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+8,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+35,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+42,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+13,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+22,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+14,no_damage,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,none
+11,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+36,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+33,glass_shatter,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+23,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+40,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+10,scratch,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,1,none,minor
+35,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+43,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+22,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+15,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+38,crack,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+22,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+1,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+48,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+48,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+49,scratch,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+41,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+12,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+4,scratch,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+1,dent,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,1,none,medium
+42,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+10,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+32,no_damage,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,none
+3,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+34,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+36,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+31,glass_shatter,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,medium
+20,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+24,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+1,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+31,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+43,crack,Delle im Kotflügel nach Auffahrunfall mit geringer Geschwindigkeit.,0,damage_type_mismatch,minor
+1,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+25,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+11,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+8,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+44,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+9,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+0,scratch,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,1,none,minor
+33,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+6,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+20,no_damage,Überprüfung ergab keine äusserlichen Schäden am Fahrzeug.,1,none,none
+7,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+22,crack,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+43,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+44,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+22,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+4,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+18,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+47,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+48,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+24,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+34,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+15,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+17,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+11,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+32,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+44,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+30,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+9,no_damage,"Schwerer Frontaufprall, Totalschaden, nicht fahrbereit.",0,severity_mismatch,none
+40,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+16,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+3,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+3,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+39,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+10,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+23,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+44,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+46,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+40,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+4,scratch,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,1,none,minor
+47,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+13,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+19,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+34,scratch,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+37,glass_shatter,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,1,none,medium
+29,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+31,glass_shatter,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",1,none,medium
+23,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+25,glass_shatter,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,medium
+12,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+31,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+15,crack,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,minor
+13,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+49,no_damage,"Fahrzeug in einwandfreiem Zustand, keine Beeinträchtigungen.",1,none,none
+3,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+15,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+17,scratch,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,minor
+0,scratch,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+40,dent,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,medium
+38,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+32,glass_shatter,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,medium
+0,crack,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,minor
+25,glass_shatter,"Kleiner Kratzer, kaum sichtbar, nur oberflächlich.",0,severity_mismatch,medium
+19,crack,Bruch am Stossfänger nach Kollision mit Randstein.,1,none,minor
+5,no_damage,"Schramme am Stossfänger, Farbe abgeschürft.",0,damage_type_mismatch,none
+42,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+26,dent,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,medium
+41,crack,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+47,scratch,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+0,dent,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+34,no_damage,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,none
+45,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+40,crack,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,minor
+20,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+1,scratch,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,minor
+8,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+43,glass_shatter,Kleiner Kratzer laut Kunde — Totalschaden beantragt.,0,fraud_signal,medium
+27,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+6,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+13,crack,"Fahrzeug komplett zerstört, Totalschaden nach Unfall.",0,severity_mismatch,minor
+41,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+22,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+34,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+24,no_damage,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,none
+41,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+36,scratch,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,minor
+44,glass_shatter,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",1,none,medium
+10,scratch,Heckscheibe zerbrochen durch Vandalismusschaden.,0,damage_type_mismatch,minor
+3,dent,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",0,damage_type_mismatch,medium
+28,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+0,glass_shatter,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",1,none,medium
+46,scratch,"Totalschaden nach Unfall, keine Polizeirapport, dringend Rückerstattung.",0,fraud_signal,minor
+18,scratch,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",0,damage_type_mismatch,minor
+41,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+10,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+48,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+11,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+4,no_damage,Massiver Schaden an Karosserie und Motor nach Kollision.,0,severity_mismatch,none
+21,crack,"Riss in der Frontschürze, strukturell nicht beeinträchtigt.",1,none,minor
+45,no_damage,"Fahrzeug wirkt unbeschädigt, keine Spuren einer Kollision.",1,none,none
+26,crack,Riss im Stossfänger nach leichtem Aufprall.,1,none,minor
+7,no_damage,"Massiver Schaden nach Unfall mit unbekanntem Dritten, keine Zeugen.",0,fraud_signal,none
+10,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+41,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+18,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+40,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+21,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+47,dent,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,medium
+45,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+24,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+18,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+20,glass_shatter,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,medium
+27,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+14,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+18,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+40,crack,Gebrochenes Kunststoffteil an der vorderen Verkleidung.,1,none,minor
+14,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+36,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+13,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+5,dent,Oberflächlicher Lackschaden beim Einparken in enger Parklücke.,0,damage_type_mismatch,medium
+28,scratch,"Seitenscheibe eingeschlagen, vermutlich Einbruchsversuch.",0,damage_type_mismatch,minor
+14,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+40,dent,"Beule an der hinteren Stossstange, Fahrzeug war geparkt.",1,none,medium
+19,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+38,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+47,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+46,scratch,Delle an der Fahrertür nach Parkschaden durch unbekannten Dritten.,0,damage_type_mismatch,minor
+1,no_damage,Kratzer im Lack an der Seitenwand durch spitzen Gegenstand.,0,damage_type_mismatch,none
+3,crack,"Glasbruch an der Frontscheibe, Splitter im Fahrzeug.",0,damage_type_mismatch,minor
+22,crack,"Sofortige Auszahlung benötigt, keine Details verfügbar.",0,fraud_signal,minor
+35,scratch,"Massiver Schaden, bar bezahlt, keine Quittung.",0,fraud_signal,minor
+42,glass_shatter,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,medium
+27,scratch,"Lackschaden durch Vandalismus, langer Kratzer auf der Fahrerseite.",1,none,minor
+15,glass_shatter,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,0,damage_type_mismatch,medium
+32,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
+15,glass_shatter,"Keine Zeugen, sofort gemeldet, dringend Entschädigung CHF 15.000.",0,fraud_signal,medium
+17,no_damage,"Totalschaden, gestohlen, dringend Entschädigung, bar bezahlt.",0,fraud_signal,none
+24,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+43,scratch,"Schramme am Stossfänger, Farbe abgeschürft.",1,none,minor
+21,dent,"Kleiner Kratzer laut Kunde, kaum sichtbar — dringend Auszahlung.",0,fraud_signal,medium
+14,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+32,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+3,scratch,Totalschaden nach schwerem Auffahrunfall mit Personenschaden.,0,severity_mismatch,minor
+16,crack,"Massiver Strukturschaden, Fahrzeug muss abgeschrieben werden.",0,severity_mismatch,minor
+30,dent,Windschutzscheibe gesplittert durch Steinschlag auf Autobahn.,0,damage_type_mismatch,medium
+3,glass_shatter,"Minimaler Schaden, kaum der Rede wert, kleiner Kratzer.",0,severity_mismatch,medium
+5,dent,Eingedrückte Karosserie nach leichter Kollision auf dem Parkplatz.,1,none,medium
+25,glass_shatter,Heckscheibe zerbrochen durch Vandalismusschaden.,1,none,medium
+17,dent,"Fahrzeug gestohlen, keine Zeugen, sofortige Entschädigung erbeten.",0,fraud_signal,medium
+26,dent,"Totalschaden, Fahrzeug wirtschaftlich nicht mehr reparierbar.",0,severity_mismatch,medium
+17,scratch,"Fahrzeug vollständig demoliert, Totalschaden.",0,severity_mismatch,minor
+15,no_damage,Kein sichtbarer Schaden am Fahrzeug nach angeblichem Unfall.,1,none,none
+8,crack,"Unbekannte haben Fahrzeug gestohlen, keine Zeugen.",0,fraud_signal,minor
+25,dent,"Massiver Frontschaden, Airbags ausgelöst, nicht fahrbereit.",0,severity_mismatch,medium
