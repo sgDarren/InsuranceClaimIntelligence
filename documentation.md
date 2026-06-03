@@ -48,7 +48,7 @@ If a third block is selected, it is documented and graded separately as extra wo
   - ML: R² ≥ 0.70 → erreicht: **R² = 0.725 (Random Forest)** ✅
   - CV: Accuracy ≥ 0.75 → erreicht: **79.85%, F1 Macro = 0.85** ✅
   - RAG: LM-Judge ≥ 4.0/5.0 → erreicht: **4.70/5.0** ✅
-  - Fraud Detection: AUC ohne echte multimodale Daten = 0.486 — Yang et al. (2023) belegen +12.24% AUC mit echten multimodalen Daten 
+  - Fraud Detection: AUC ohne echte multimodale Daten = 0.486 — Yang et al. (2023) belegen +12.24% AUC mit echten multimodalen Daten ⚠️
   - consistency_score (CV↔NLP) als multimodales Feature konzeptionell implementiert ✅
 
 ### 1.2 Integration Logic
@@ -144,7 +144,7 @@ See [`src/ml/train.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/b
 | 2 | Ensemble | 200 Trees, Feature Engineering | Random Forest | RMSE=CHF 11'541, R²=0.725 | R² +9.4% |
 | 3 | Optimiert | GridSearch (n_estimators, max_depth, learning_rate) | XGBoost | RMSE=CHF 11'677, R²=0.719 | — |
 
-**Warum Random Forest als Winner (Regression):** Random Forest (R²=0.725) übertrifft XGBoost (R²=0.719) nach Behebung des Target Leakage. XGBoost bleibt als Modell erhalten wegen SHAP-Kompatibilität und Konfigurierbarkeit via GridSearch. Fraud Detection via separatem `RandomForestClassifier` mit `class_weight="balanced"`.
+**Warum XGBoost deployed (trotz Random Forest Winner bei Regression):** Random Forest (R²=0.725) ist der beste Regressor. XGBoost (R²=0.719) wird in der App deployed wegen nativer SHAP-Kompatibilität für Explainability und vollständiger GridSearch-Konfigurierbarkeit. Der R²-Unterschied (0.006) ist minimal — beide Modelle sind produktionstauglich.
 
 See [`src/ml/train.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/src/ml/train.py), Iterationen Zeilen 90-160.
 
@@ -152,25 +152,32 @@ See [`src/ml/train.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/b
 
 - **Metrics used:** RMSE (CHF), R², F1, AUC-ROC (Fraud), Ablation Study (4 Experimente)
 
-- **Final results:**
+- **Final results (aus `models/ml_results.json`):**
 
-  Ablation Study:
-  | Experiment | Features | RMSE CHF | R² |
-  |---|---|---|---|
-  | Structured Only | 19 Features | 12'821 | 0.661 |
-  | + NLP | +4 Features | 12'847 | 0.643 |
-  | + CV | +4 Features | 12'133 | 0.656 |
-  | Full Multimodal | +consistency | 12'352 | 0.653 |
+  | Modell | RMSE CHF | R² |
+  |---|---|---|
+  | Linear Regression | 12'778 | 0.663 |
+  | Random Forest ← Winner | 11'541 | **0.725** |
+  | XGBoost (deployed) | 11'677 | 0.719 |
 
-  Fraud Detection: F1=0.000, AUC=0.486 (nahezu zufällig ohne echte multimodale Daten)
+  Ablation Study (alle Werte aus `ml_results.json`):
+  | Experiment | R² |
+  |---|---|
+  | Structured Only | 0.661 |
+  | Structured + NLP | 0.643 |
+  | Structured + CV | 0.656 |
+  | Full Multimodal | 0.653 |
 
-  **Ablation Interpretation:** CV-Features allein (+CV: R²=0.696) verbessern stärker als Full Multimodal (R²=0.685), weil die simulierten NLP-Features im kombinierten Modell zusätzliches Rauschen einführen. Im produktiven System — mit echten NLP-Outputs — wird der Mehrwert von Full Multimodal höher erwartet als +CV allein.
+  Fraud Detection: F1=0.000, AUC=0.486 (nahezu zufällig — ohne echte multimodale Daten erwartet)
 
-  **Wichtige Limitation — Fraud Detection:** Der Fraud-Classifier ist ein `RandomForestClassifier` (nicht XGBoost) mit `class_weight="balanced"`. Die Fraud-Features `consistency_score` und `fraud_signal_count` werden im Training für Fraud-Fälle gezielt tiefer/höher gesetzt — **nachdem das Fraud-Label bekannt ist**. Dies entspricht einem Target-Leakage-Szenario: Die berichtete AUC=0.931 ist deshalb nicht als belastbarer Nachweis für Fraud Detection in der Praxis zu werten, sondern zeigt primär dass die Architektur theoretisch funktionieren würde, wenn echte multimodale Features verfügbar wären. In einem produktiven System würden CV/NLP-Features unabhängig vom Fraud-Label berechnet.
+  **Ablation Interpretation:** NLP- und CV-Features als proxy-generierte Werte bringen keinen messbaren Mehrwert — sie fügen Rauschen hinzu. Yang et al. (2023) zeigen mit echten multimodalen Daten +12.24% AUC. Die Ablation belegt die Architektur-Entscheidung, nicht den quantitativen Mehrwert.
 
-- **Error patterns and likely causes:** CV/NLP Features sind im ML-Block simuliert (synthetisch), da echte Modell-Outputs erst im produktiven System fliessen. **Wichtige Einschränkung:** Die Ablation Study beweist daher primär die Architektur-Entscheidung, nicht den tatsächlichen quantitativen Mehrwert. Im produktiven System — wo ViT echte `damage_type` Features liefert — wird der Mehrwert grösser erwartet. Die EDA belegt dies: Ø Schadenhöhe von Legitim vs. Fraud ist nahezu identisch (CHF ~16'500), was zeigt dass strukturierte Daten allein Fraud nicht erkennen können → multimodale Features (consistency_score) sind zwingend notwendig. Fraud Recall niedrig (0.18) wegen 5% Klassenimbalance; Precision=1.00 bewusst priorisiert (kein legitimer Kunde falsch markiert).
+- **Error patterns and likely causes:**
+  - CV/NLP Features sind **proxy-generiert** (nicht echte Modell-Outputs auf denselben Claims). Kein Target Leakage — `consistency_score` wird via Cosine-Ähnlichkeit unabhängig vom Fraud-Label berechnet.
+  - Fraud AUC=0.486 bestätigt: strukturierte Daten + proxy-Features reichen nicht für Fraud Detection. Echte CV/NLP-Outputs auf denselben Claims würden den Unterschied machen.
+  - Fraud Recall=0.0 wegen 5% Klassenimbalance und fehlender echter Fraud-Signale in proxy-generierten Features.
 
-  **Warum kein End-to-End Training möglich war:** Das Kaggle-Dataset (`insurance_data.csv`) enthält ausschliesslich strukturierte Spalten — keine Schadenfotos, keine Freitextbeschreibungen. Das CV-Dataset (HuggingFace `SaiVaibhavS`) enthält Fotos, aber keine strukturierten Vertragsdaten. Beide Datasets teilen keinen gemeinsamen Claim-Identifier und können daher nicht verbunden werden. Ein echtes multimodales Dataset (Foto + Beschreibungstext + Vertragsdaten für denselben Claim) existiert nicht öffentlich, da Versicherungsfotos zusammen mit Vertragsdaten datenschutzrechtlich als personenbezogene Daten gelten (DSGVO) und von keinem Versicherer öffentlich geteilt werden. Die Simulation der CV/NLP Features ist daher die einzig mögliche Lösung im akademischen Kontext — in einem produktiven System würden diese Features direkt von den trainierten Modellen befüllt.
+  **Warum kein End-to-End Training möglich:** Kaggle-Dataset enthält keine Fotos/Texte. HuggingFace CV-Dataset enthält keine Vertragsdaten. Kein gemeinsamer Claim-Identifier. DSGVO verhindert öffentliche multimodale Versicherungsdatasets. → Proxy-Generierung ist die einzig mögliche akademische Lösung.
 
 See [`models/ablation_study.png`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/ablation_study.png), [`models/shap_summary.png`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/models/shap_summary.png).
 
@@ -339,6 +346,12 @@ See [`models/eda_cv.png`](https://github.com/sgDarren/InsuranceClaimIntelligence
 
 - **Deployment URL:** https://huggingface.co/spaces/DarrenOG/InsuranceClaim
 
+- **Model loading status:** Die App lädt beim Start alle Modelle und gibt den Status aus:
+  - `ML Modelle geladen` → XGBoost + RandomForest aktiv
+  - `ViT geladen` → echte CV-Klassifikation aktiv
+  - `NLP RAG bereit: 70 Chunks` → echte AXA AVB PDF-Chunks aktiv
+  - Falls ViT nicht geladen → Demo-Modus mit explizitem Hinweis in Logs
+
 - **Main user flow:**
   1. Tab "Schadenanalyse": Bild hochladen + Beschreibung + Vertragsdaten → CV/NLP/ML Analyse → Schadenhöhe + Fraud-Score + Entscheidung
   2. Tab "Deckungsauskunft": Schadensart + Versicherungstyp → RAG über AXA AVB → Deckungsauskunft mit AVB-Klausel (3 Prompt-Varianten + 3 Rollen vergleichbar)
@@ -430,5 +443,6 @@ python app.py   # Gradio App → http://127.0.0.1:7860
    - Fairness: Demografische Features nicht genutzt
    - Human-in-the-Loop: Fraud-Score > 0.70 → Manuelle Prüfung
    - Halluzination: RAG mit AVB-Quellen + "Refuse when evidence is thin"
+   - Multimodale Fraud-Logik: `consistency_score` < 0.3 → Fraud Analyst Rolle automatisch aktiviert (CV↔NLP Inkonsistenz als Trigger)
 
 4. **Creative use case:** GPT-4o Vision als Dataset-Annotator — 700 Crushed-Bilder automatisch in versicherungskonforme Klassen relabelt. Wissenschaftlicher Beitrag: LLM-gestütztes Dataset-Labeling für Domänen ohne öffentliche Benchmark-Datasets.
