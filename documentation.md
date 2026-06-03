@@ -106,20 +106,22 @@ See [`src/app/app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/bl
 
 - **Feature engineering and selection:** 19 strukturierte Features + 4 NLP-Features + 4 CV-Features = 27 Features total.
 
+  **Wichtige Einschränkung:** CV/NLP Features sind im ML-Training **proxy-generiert** — nicht direkte Outputs des trainierten ViT-Modells auf Claim-Bildern. CV-Features basieren auf echten Konfusionsmatrix-Wahrscheinlichkeiten des ViT Fine-Tunings (z.B. dent→71% korrekt). NLP-Features basieren auf realistischen domänenbasierten Beschreibungen mit echter Cosine-Ähnlichkeit via SentenceTransformer. Dies ist eine Architektursimulation — im produktiven System würden echte Modell-Outputs fliessen.
+
   | Feature | Typ | Quelle | Begründung |
   |---|---|---|---|
-  | `policy_age_days` | Engineered | Structured | LOSS_DT - POLICY_EFF_DT → neue Policen (<90 Tage) = höheres Fraud-Risiko |
-  | `report_delay_days` | Engineered | Structured | REPORT_DT - LOSS_DT → verzögerte Meldung = Fraud-Signal |
-  | `new_policy_flag` | Binary | Structured | policy_age_days < 90 → binäres Fraud-Feature |
-  | `is_night` | Binary | Structured | Stunde < 6 oder > 22 → Nachtunfälle häufiger fraudulös |
-  | `INSURANCE_TYPE_enc` | Encoded | Structured | LabelEncoder auf kategorische Spalte |
-  | `INCIDENT_SEVERITY_enc` | Encoded | Structured | LabelEncoder: Minor/Major/Total Loss |
-  | `damage_type_enc` | Encoded | **CV-Output** | ViT-Klassifikation → dent/scratch/crack/glass_shatter/no_damage |
-  | `damage_severity` | Numeric | **CV-Output** | 0=Minor, 1=Moderate, 2=Severe |
-  | `cv_confidence` | Numeric | **CV-Output** | ViT-Modellkonfidenz (0-1) |
-  | `consistency_score` | Numeric | **CV+NLP** | Cosine-Ähnlichkeit CV-Label ↔ NLP-Beschreibung → stärkstes Fraud-Feature |
-  | `fraud_signal_count` | Numeric | **NLP-Output** | Anzahl Fraud-Signalwörter in Beschreibung |
-  | `incident_type_nlp` | Encoded | **NLP-Output** | Unfalltyp aus Keyword-Matching (parking/rear_end/vandalism/theft/weather) |
+  | `policy_age_days` | Engineered | Structured | LOSS_DT - POLICY_EFF_DT → neue Policen = höheres Fraud-Risiko |
+  | `report_delay_days` | Engineered | Structured | Verzögerte Meldung = Fraud-Signal |
+  | `new_policy_flag` | Binary | Structured | policy_age_days < 90 |
+  | `is_night` | Binary | Structured | Stunde < 6 oder > 22 |
+  | `INSURANCE_TYPE_enc` | Encoded | Structured | LabelEncoder |
+  | `INCIDENT_SEVERITY_enc` | Encoded | Structured | Minor/Major/Total Loss |
+  | `damage_type_enc` | Proxy-CV | ViT Konfusionsmatrix | Wahrscheinlichkeitsbasiert aus ViT F1-Scores |
+  | `damage_severity` | Proxy-CV | INCIDENT_SEVERITY | Gemappt auf 0/1/2 |
+  | `cv_confidence` | Proxy-CV | ViT F1 pro Klasse | Konfidenz aus echten F1-Scores |
+  | `consistency_score` | Proxy-CV+NLP | Cosine-Ähnlichkeit | CV-Label ↔ Beschreibung via SentenceTransformer |
+  | `fraud_signal_count` | Proxy-NLP | Keyword-Matching | Fraud-Signalwörter in Beschreibung |
+  | `incident_type_nlp` | Proxy-NLP | Keyword-Matching | Unfalltyp aus domänenbasierten Beschreibungen |
 
   Feature Selection: alle 27 Features verwendet — SHAP zeigt `INSURANCE_TYPE_enc`, `PREMIUM_AMOUNT` und `consistency_score` als Top-3.
 
@@ -410,19 +412,19 @@ python app.py   # Gradio App → http://127.0.0.1:7860
 
 **Evidence:**
 
-1. **Alle 3 Blöcke:** CV (79.85% F1=0.85) + ML (R²=0.721, AUC=0.931) + NLP (4.70/5.0) — vollständig implementiert und integriert
+1. **Alle 3 Blöcke:** CV (79.85%, F1 Macro=0.85) + ML (R²=0.725, Random Forest) + NLP (4.70/5.0) — vollständig implementiert und integriert
 
 2. **Extended Evaluation:**
    - Ablation Study: 4 Experimente Structured→+NLP→+CV→Full Multimodal
    - LM-as-Judge: 10 Versicherungsfragen, 3 Prompt-Varianten bewertet
    - CV: Classification Report pro Klasse + Vergleich 4 Modelle
+   - Fraud Detection: AUC=0.486 ohne echte multimodale Daten — Yang et al. (2023) belegen +12.24% AUC mit echten Daten
 
 3. **Ethics/Bias:**
    - DSGVO: Schadenfotos temporär verarbeitet, nicht persistiert
    - Algorithmic Bias: Dataset westlich geprägt → als Limitation dokumentiert
-   - Fairness: Demografische Features nicht genutzt (< 5% SHAP Importance)
-   - False-Positive: Precision=1.00 priorisiert — kein legitimer Kunde falsch markiert
+   - Fairness: Demografische Features nicht genutzt
    - Human-in-the-Loop: Fraud-Score > 0.70 → Manuelle Prüfung
    - Halluzination: RAG mit AVB-Quellen + "Refuse when evidence is thin"
 
-4. **Creative use case:** GPT-4o Vision als Dataset-Annotator — 700 Crushed-Bilder automatisch in versicherungskonforme Klassen relabelt (dent/scratch/crack). Wissenschaftlicher Beitrag: zeigt LLM-gestütztes Dataset-Labeling für Domänen ohne öffentliche Benchmark-Datasets.
+4. **Creative use case:** GPT-4o Vision als Dataset-Annotator — 700 Crushed-Bilder automatisch in versicherungskonforme Klassen relabelt. Wissenschaftlicher Beitrag: LLM-gestütztes Dataset-Labeling für Domänen ohne öffentliche Benchmark-Datasets.
