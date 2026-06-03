@@ -141,6 +141,7 @@ def build_dataset(labels_csv: str = "data/raw/insurance_labels_balanced.csv",
     - Fall D: Fraud-Signal (label=0, mismatch=fraud_signal)
     """
     # Labels laden
+    label_col = "label"
     if os.path.exists(labels_csv):
         df_labels = pd.read_csv(labels_csv)
         label_col = "label" if "label" in df_labels.columns else "label_final"
@@ -152,7 +153,6 @@ def build_dataset(labels_csv: str = "data/raw/insurance_labels_balanced.csv",
             for i in range(n_per_class):
                 rows.append({"idx": i, label_col: cls})
         df_labels = pd.DataFrame(rows)
-        label_col = "label"
 
     records = []
     for cls in INSURANCE_CLASSES:
