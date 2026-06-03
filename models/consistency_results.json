@@ -1,0 +1,24 @@
+{
+  "logistic_regression": {
+    "f1": 0.6,
+    "auc": 0.8633333333333334
+  },
+  "random_forest": {
+    "f1": 1.0,
+    "auc": 1.0
+  },
+  "xgboost": {
+    "f1": 1.0,
+    "auc": 1.0
+  },
+  "winner": "random_forest",
+  "feature_cols": [
+    "cv_label_enc",
+    "cv_confidence",
+    "nlp_incident_type",
+    "fraud_signal_count",
+    "description_length",
+    "cosine_similarity",
+    "severity_mismatch"
+  ]
+}
