@@ -2,7 +2,7 @@
 Insurance Claim Intelligence — HuggingFace Spaces App
 ZHAW AI Applications FS2026
 
-Deployment: https://huggingface.co/spaces/DarrenOG/insurance-claim-intelligence
+Deployment: https://huggingface.co/spaces/[username]/insurance-claim-intelligence
 """
 
 import os, json, re, base64, joblib
@@ -66,30 +66,76 @@ except Exception as e:
 try:
     embedder = SentenceTransformer("all-MiniLM-L6-v2", backend="torch")
 except Exception:
-    # Fallback für neuere sentence-transformers Versionen
     from sentence_transformers import SentenceTransformer as ST
     embedder = ST("sentence-transformers/all-MiniLM-L6-v2")
 
-# Versicherungsbedingungen (Fallback wenn keine DB vorhanden)
-POLICIES = [
-    ("Vollkaskoversicherung deckt Schäden durch Kollision, Diebstahl, Feuer, Naturereignisse und Vandalismus. Franchise CHF 300-2000.", "AXA AVB §59"),
-    ("Teilkaskoversicherung deckt Diebstahl, Feuer, Naturereignisse, Glasbruch und Marderbiss. Kollisionsschäden nicht gedeckt.", "AXA AVB §58"),
-    ("Parkschäden durch unbekannte Dritte bei Vollkasko gedeckt, sofern unverzüglich gemeldet.", "AXA AVB §12"),
-    ("Versicherungsbetrug: Falsche Angaben führen zur Leistungsverweigerung.", "AXA AVB §40"),
-    ("Hagelschäden sind Elementarschaden in der Teilkasko gedeckt. Meldung innerhalb 5 Tage.", "AXA AVB §8"),
-    ("Totalschäden auf Basis des Zeitwerts entschädigt abzüglich Franchise.", "AXA AVB §15"),
-    ("Vandalismusschäden bei Vollkasko gedeckt. Polizeirapport erforderlich.", "AXA AVB §11"),
-    ("Glasbruchschäden an Windschutzscheibe ohne Franchise bei Glasbruchdeckung.", "AXA AVB §9"),
-    ("Auffahrunfälle bei Vollkasko gedeckt. Bei Teilschuld anteilige Kürzung.", "AXA AVB §10"),
-    ("Diebstahl bei Voll- und Teilkasko gedeckt. Meldung innerhalb 48 Stunden.", "AXA AVB §13"),
-    ("Kratzer und Lackschäden durch Vandalismus bei Vollkasko gedeckt.", "AXA AVB §11b"),
-    ("Marderschäden an Kabeln und Schläuchen in der Teilkasko gedeckt.", "AXA AVB §8b"),
-]
+# ── RAG: Echte AXA AVB PDFs laden ────────────────────────────
+import requests
+from io import BytesIO
+try:
+    from pypdf import PdfReader
 
-policy_texts  = [p[0] for p in POLICIES]
-policy_sources = [p[1] for p in POLICIES]
+    POLICY_URLS = {
+        "AXA_OPTIMA_2023": "https://www.axa.ch/doc/ajhtk",
+        "AXA_MF_2021": "https://mzo.ch/wp-content/uploads/AXA-MF_AVB_10.2021_DE.pdf",
+    }
+
+    def download_pdf(url, name):
+        try:
+            resp = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+            reader = PdfReader(BytesIO(resp.content))
+            text = "\n".join(page.extract_text() or "" for page in reader.pages)
+            print(f"  {name}: {len(reader.pages)} Seiten")
+            return text, name
+        except Exception as e:
+            print(f"  {name}: Fehler - {e}")
+            return "", name
+
+    def chunk_text(text, chunk_size=300, overlap=30):
+        words, chunks = text.split(), []
+        i = 0
+        while i < len(words):
+            chunk = " ".join(words[i:i+chunk_size])
+            if len(chunk.strip()) > 100:
+                chunks.append(chunk)
+            i += chunk_size - overlap
+        return chunks
+
+    print("Lade AXA AVB PDFs...")
+    policy_texts, policy_sources = [], []
+    for name, url in POLICY_URLS.items():
+        text, src = download_pdf(url, name)
+        if text:
+            for chunk in chunk_text(text):
+                policy_texts.append(chunk)
+                policy_sources.append(src)
+
+    if len(policy_texts) < 10:
+        raise ValueError("PDFs nicht geladen")
+
+    print(f"  {len(policy_texts)} Chunks aus echten AXA AVB PDFs")
+
+except Exception as e:
+    print(f"Fallback auf statische Policies: {e}")
+    POLICIES = [
+        ("Vollkaskoversicherung deckt Schäden durch Kollision, Diebstahl, Feuer, Naturereignisse und Vandalismus. Franchise CHF 300-2000.", "AXA AVB §59"),
+        ("Teilkaskoversicherung deckt Diebstahl, Feuer, Naturereignisse, Glasbruch und Marderbiss. Kollisionsschäden nicht gedeckt.", "AXA AVB §58"),
+        ("Parkschäden durch unbekannte Dritte bei Vollkasko gedeckt, sofern unverzüglich gemeldet.", "AXA AVB §12"),
+        ("Versicherungsbetrug: Falsche Angaben führen zur Leistungsverweigerung.", "AXA AVB §40"),
+        ("Hagelschäden sind Elementarschaden in der Teilkasko gedeckt. Meldung innerhalb 5 Tage.", "AXA AVB §8"),
+        ("Totalschäden auf Basis des Zeitwerts entschädigt abzüglich Franchise.", "AXA AVB §15"),
+        ("Vandalismusschäden bei Vollkasko gedeckt. Polizeirapport erforderlich.", "AXA AVB §11"),
+        ("Glasbruchschäden an Windschutzscheibe ohne Franchise bei Glasbruchdeckung.", "AXA AVB §9"),
+        ("Auffahrunfälle bei Vollkasko gedeckt. Bei Teilschuld anteilige Kürzung.", "AXA AVB §10"),
+        ("Diebstahl bei Voll- und Teilkasko gedeckt. Meldung innerhalb 48 Stunden.", "AXA AVB §13"),
+        ("Kratzer und Lackschäden durch Vandalismus bei Vollkasko gedeckt.", "AXA AVB §11b"),
+        ("Marderschäden an Kabeln und Schläuchen in der Teilkasko gedeckt.", "AXA AVB §8b"),
+    ]
+    policy_texts   = [p[0] for p in POLICIES]
+    policy_sources = [p[1] for p in POLICIES]
+
 policy_embeddings = embedder.encode(policy_texts)
-print("✅ NLP RAG bereit")
+print(f"NLP RAG bereit: {len(policy_texts)} Chunks indexiert")
 
 # ══════════════════════════════════════════════════════════════
 # HILFSFUNKTIONEN
