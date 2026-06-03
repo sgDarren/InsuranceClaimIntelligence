@@ -366,8 +366,12 @@ See [`app.py`](https://github.com/sgDarren/InsuranceClaimIntelligence/blob/main/
 git clone https://github.com/sgDarren/InsuranceClaimIntelligence
 cd InsuranceClaimIntelligence
 pip install -r requirements.txt
-cp .env.example .env  # OPENAI_API_KEY eintragen
 ```
+
+**API Key Setup:**
+- **HuggingFace Spaces:** Settings → Variables and Secrets → `OPENAI_API_KEY`
+- **GitHub Actions:** Settings → Secrets → `OPENAI_API_KEY`
+- **Lokal:** `export OPENAI_API_KEY=sk-proj-...` (Terminal) oder direkt im Code setzen
 
 - **Data setup:**
 ```bash
